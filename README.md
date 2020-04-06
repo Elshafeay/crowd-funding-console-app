@@ -8,3 +8,8 @@
 
 **And inside the script you can open the documentation by typing**
 * ```help```
+
+---
+#### Here is a simple demo of our project
+
+![demo](demo.gif)

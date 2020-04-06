@@ -2,6 +2,7 @@
 
 => menu                     to show you the current available options
 => login                    to login
+=> logout                   to logout
 => register                 to register
 => create project           to create project
 => list all                 to list all projects

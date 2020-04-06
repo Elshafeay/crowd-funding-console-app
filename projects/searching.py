@@ -28,7 +28,7 @@ def search():
 
 
 def search_using_title():
-	title = input("Enter the title of the project you wanna search for: ")
+	title = input("Enter the keyword you wanna search for: ")
 	if title and not title.lower() == "cancel":
 		query_result = list()
 		p = PrinterJSON()
@@ -115,6 +115,8 @@ def search_using_date():
 			return
 		else:
 			printing_warning("Error: Wrong Option!\n")
+			continue
+		return
 
 
 def search_exact_date(date_option):
