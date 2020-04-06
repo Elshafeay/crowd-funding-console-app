@@ -10,7 +10,7 @@ def create_project():
 
 	while True:
 		title = input("Please enter your project title: ")
-		if title and len(title) > 2:
+		if title and len(title) > 2 and not title.lower() == "cancel":
 			break
 		elif title.lower() == "cancel":
 			return
@@ -39,19 +39,19 @@ def create_project():
 
 	while True:
 		while True:
-			start_date = input("Please enter your project start date in the format yyyy-mm-dd: ")
-			start_date = handle_date(start_date)
+			start_date_input = input("Please enter your project start date in the format yyyy-mm-dd: ")
+			start_date = handle_date(start_date_input)
 			if start_date:
 				break
-			elif start_date.lower() == "cancel":
+			elif start_date_input.lower() == "cancel":
 				return
 
 		while True:
-			end_date = input("Please enter your project end date in the format yyyy-mm-dd: ")
-			end_date = handle_date(end_date)
+			end_date_input = input("Please enter your project end date in the format yyyy-mm-dd: ")
+			end_date = handle_date(end_date_input)
 			if end_date:
 				break
-			elif end_date.lower() == "cancel":
+			elif end_date_input.lower() == "cancel":
 				return
 
 		if start_date < end_date:

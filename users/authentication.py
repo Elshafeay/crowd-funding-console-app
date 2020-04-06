@@ -17,11 +17,11 @@ def login():
 				break
 		else:
 			printing_error("Error: User Not Found!\n")
-			return
+			continue
 
 		if user["password"] == password:
 			printing_success("You have successfully logged in")
-			printing_the_hey(f"Hello {user['first_name']} {user['last_name']}, Welcome to our Application")
+			printing_the_hey(f"Hello {user['first_name']} {user['last_name']}, Welcome here")
 			main.current_user = user
 			load_my_projects()
 			break

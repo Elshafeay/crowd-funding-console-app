@@ -15,21 +15,23 @@ my_projects = []
 
 
 def start():
-	print("Welcome to our application!")
-	print("For any details you can checkout out the documentation by typing 'help'")
+	printing_the_hey("\n\t+====================================================+")
+	printing_the_hey("\t|            Welcome to our application!             |")
+	printing_the_hey("\t+====================================================+")
+	printing_warning("\nFor any details you can checkout out the documentation by typing 'help'")
 	load_all_projects()
 	while True:
 		try:
 			input_array = input(">> ")
 		except (EOFError, KeyboardInterrupt):
-			printing_the_hey("\nHope to see you soon! :)")
+			printing_the_hey("\nHave a nice day! :)")
 			break
 
 		command = input_array.split(" ")
 		if command[0].lower() == "help" and len(command) == 1:
 			show_help()
 		elif command[0].lower() == "exit" and len(command) == 1:
-			printing_the_hey("Hope to see you soon! :)")
+			printing_the_hey("Have a nice day! :)")
 			break
 		elif command[0].lower() == "menu" and len(command) == 1:
 			show_menu()
@@ -42,6 +44,7 @@ def start():
 			if not check_logged_in():
 				continue
 			logout()
+			printing_the_hey("\nHope to see you soon! ;)")
 		elif command[0].lower() == "register" and len(command) == 1:
 			if current_user["email"]:
 				printing_error("Error: You already using an account!\n")

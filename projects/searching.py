@@ -46,7 +46,7 @@ def search_using_title():
 def search_using_target():
 	p = PrinterJSON()
 	while True:
-		print("\n=> Leave the values blank for an open range <=")
+		printing_error("\n=> Leave the values blank for an open range <=")
 		min_target = input("Enter the minimum target of your range: ")
 		if min_target.lower() == "cancel":
 			return
