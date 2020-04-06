@@ -1,0 +1,16 @@
+====================================================================
+
+=> menu                     to show you the current available options
+=> login                    to login
+=> register                 to register
+=> create project           to create project
+=> list all                 to list all projects
+=> list mine                to list your projects
+=> edit [project_id]        to edit one of your projects
+=> delete [project_id]      to delete one of your projects
+=> search                   to search for some projects
+=> cancel                   to terminate the current operation
+=> help                     to see the documentation
+=> exit                     to close the application
+
+====================================================================
