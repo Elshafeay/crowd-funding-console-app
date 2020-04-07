@@ -12,9 +12,9 @@ def show_menu():
 	if main.current_user["email"]:
 		printing_bold(
 			"* Create project",
-			"* View all projects",
 			"* Edit your projects",
 			"* Delete your projects",
+			"* list projects",
 			"* search for projects",
 		)
 		return

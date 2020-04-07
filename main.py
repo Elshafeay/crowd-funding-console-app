@@ -44,7 +44,7 @@ def start():
 			if not check_logged_in():
 				continue
 			logout()
-			printing_the_hey("\nHope to see you soon! ;)")
+			printing_the_hey("Hope to see you soon! ;)")
 		elif command[0].lower() == "register" and len(command) == 1:
 			if current_user["email"]:
 				printing_error("Error: You already using an account!\n")

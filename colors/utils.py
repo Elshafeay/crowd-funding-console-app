@@ -1,3 +1,4 @@
+from getpass import getpass
 from colors.__Class__ import Colors
 
 
@@ -22,3 +23,12 @@ def printing_bold(*message):
 	for msg in message:
 		print(f"{Colors.BOLD}{Colors.WARNING}{msg}{Colors.ENDC}")
 
+
+def taking_input(message):
+	inp = input(f"{Colors.WARNING}{message}{Colors.ENDC}")
+	return inp
+
+
+def taking_password(message):
+	password = getpass(f"{Colors.WARNING}{message}{Colors.ENDC}")
+	return password

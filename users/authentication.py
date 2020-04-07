@@ -1,16 +1,15 @@
 import main
-from colors.utils import printing_error, printing_success, printing_the_hey
+from colors.utils import printing_error, printing_success, printing_the_hey, taking_input, taking_password
 from projects.loading import load_my_projects
-from getpass import getpass
 from users.utils import get_all_users
 
 
 def login():
 	while True:
-		email = input("Please enter your E-mail Address: ")
+		email = taking_input("Please enter your E-mail Address: ")
 		if email.lower() == "cancel":
 			return
-		password = getpass("Please enter your password: ")
+		password = taking_password("Please enter your password: ")
 		users = get_all_users()
 		for user in users.get("accounts", []):
 			if user["email"] == email.lower():

@@ -1,7 +1,7 @@
 import datetime
 import re
 import main
-from colors.utils import printing_warning
+from colors.utils import printing_warning, printing_error
 from projects.loading import load_all_projects
 
 
@@ -39,5 +39,5 @@ def handle_date(date):
 		if (13 > month > 0) and (32 > day > 0):
 			date = datetime.date(year, month, day)
 			return date
-	printing_warning("Error: Wrong Date Format!\n")
+	printing_error("Error: Wrong Date Format!\n")
 	return None

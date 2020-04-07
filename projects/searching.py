@@ -57,10 +57,10 @@ def search_using_target():
 			min_target = int(min_target) if min_target else 0
 			max_target = int(max_target) if max_target else 0
 			if (min_target < 0) or (max_target < 0):
-				printing_warning("Error: Target must be a greater than Zero\n")
+				printing_error("Error: Target must be a greater than Zero\n")
 				continue
 		except ValueError:
-			printing_warning("Error: targets must have digits only!\n")
+			printing_error("Error: targets must have digits only!\n")
 			continue
 
 		if min_target and max_target:
@@ -101,7 +101,7 @@ def search_using_date():
 		elif chosen_key.lower() == "cancel":
 			return
 		else:
-			printing_warning("Error: Wrong Option!\n")
+			printing_error("Error: Wrong Option!\n")
 			continue
 
 		print("Do you wanna search by the exact date or range of dates?")
@@ -114,7 +114,7 @@ def search_using_date():
 		elif chosen_key.lower() == "cancel":
 			return
 		else:
-			printing_warning("Error: Wrong Option!\n")
+			printing_error("Error: Wrong Option!\n")
 			continue
 		return
 
